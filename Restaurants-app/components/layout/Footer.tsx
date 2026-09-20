@@ -1,3 +1,4 @@
+```tsx
 import {
   Box,
   Container,
@@ -20,8 +21,7 @@ export default function Footer() {
         <Box
           sx={{
             display: "flex",
-            justifyContent:
-              "space-between",
+            justifyContent: "space-between",
             flexWrap: "wrap",
             gap: 4,
           }}
@@ -29,10 +29,10 @@ export default function Footer() {
           <Box>
             <Typography
               variant="h6"
-              fontWeight={800}
               sx={{
                 color: "#FFFFFF",
                 mb: 1,
+                fontWeight: 800,
               }}
             >
               DineFinder
@@ -54,8 +54,10 @@ export default function Footer() {
 
           <Box>
             <Typography
-              fontWeight={700}
-              mb={1}
+              sx={{
+                fontWeight: 700,
+                mb: 1,
+              }}
             >
               Explore
             </Typography>
@@ -82,8 +84,10 @@ export default function Footer() {
 
           <Box>
             <Typography
-              fontWeight={700}
-              mb={1}
+              sx={{
+                fontWeight: 700,
+                mb: 1,
+              }}
             >
               Contact
             </Typography>
@@ -102,8 +106,7 @@ export default function Footer() {
         <Divider
           sx={{
             my: 4,
-            borderColor:
-              "rgba(255,255,255,0.15)",
+            borderColor: "rgba(255,255,255,0.15)",
           }}
         />
 
@@ -114,8 +117,7 @@ export default function Footer() {
             color: "#9CA3AF",
           }}
         >
-          © {new Date().getFullYear()}{" "}
-          DineFinder. All rights reserved.
+          © {new Date().getFullYear()} DineFinder. All rights reserved.
         </Typography>
       </Container>
     </Box>
