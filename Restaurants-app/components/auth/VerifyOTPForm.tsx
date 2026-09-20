@@ -2,6 +2,7 @@
 "use client";
 
 import {
+  Suspense,
   useState,
 } from "react";
 
@@ -25,7 +26,7 @@ import {
   useResendOTPMutation,
 } from "@/redux/api/authApi";
 
-export default function VerifyOTPForm() {
+function VerifyOTPForm() {
   const router = useRouter();
 
   const searchParams =
@@ -241,5 +242,30 @@ export default function VerifyOTPForm() {
         </Paper>
       </Box>
     </Container>
+  );
+}
+
+export default function VerifyOTPPage() {
+  return (
+    <Suspense
+      fallback={
+        <Container maxWidth="sm">
+          <Box
+            sx={{
+              minHeight: "80vh",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <Typography>
+              Loading...
+            </Typography>
+          </Box>
+        </Container>
+      }
+    >
+      <VerifyOTPForm />
+    </Suspense>
   );
 }
